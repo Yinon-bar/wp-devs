@@ -1,48 +1,38 @@
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body <?php body_class(); ?>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit officiis possimus ex sequi quo facere perspiciatis rem ratione, in quod illum ab numquam! Aliquam in, non debitis quis aspernatur voluptatum.</p>
-    <div id="page" class="site">
-        <header>
-            <section class="top-bar">
-                <div class="logo">
-                    Logo
-                </div>
-                <div class="searchbox">
-                    Search
-                </div>
-            </section>
-            <section class="menu-area">
-                <nav class="main-menu">
-                    Menu
-                </nav>
-            </section>
-        </header>
-        <!-- -->
-        <div id="content" class="site-content">
-            <div id="primary" class="content-area">
-                <main id="main" class="site-main">
-                    <section class="hero">
-                        Hero
-                    </section>
-                    <section class="services">
-                        Services
-                    </section>
-                    <section class="home-blog">
-                        Blog
-                    </section>
-                </main>
-            </div>
+<?php get_header(); ?>
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main">
+      <section class="hero">
+        Hero
+      </section>
+      <section class="services">
+        Services
+      </section>
+      <section class="home-blog">
+        <div class="container">
+          <div class="blog-items">
+            <?php
+            if (have_posts()) :
+              while (have_posts()) : the_post();
+            ?>
+                <article>
+                  <h2><?php the_title(); ?></h2>
+                  <div class="meta-info">
+                    <p>Posted in <?php echo get_the_date(); ?> by <?php the_author_posts_link(); ?></p>
+                    <p>Categories: <?php the_category(' '); ?></p>
+                    <p>Tags: <?php the_tags('', ', '); ?></p>
+                  </div>
+                  <?php the_content(); ?>
+                </article>
+              <?php
+              endwhile;
+            else : ?>
+              <p>Nothing yet to be displayed!</p>
+            <?php endif; ?>
+          </div>
         </div>
-        <!-- -->
-        <footer class="site-footer">
-            Footer
-        </footer>
-    </div>
-</body>
-</html>
+      </section>
+    </main>
+  </div>
+</div>
+<?php get_footer(); ?>
