@@ -20,6 +20,7 @@ function wpdevs_config()
   $args = array(
     'height' => 225,
     'width' => 1920
+
   );
   add_theme_support('custom-header', $args);
   add_theme_support('post-thumbnails');
