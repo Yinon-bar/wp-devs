@@ -14,7 +14,7 @@
       <section class="top-bar">
         <div class="container">
           <div class="logo">
-            לוגו
+            <?php the_custom_logo(); ?>
           </div>
           <div class="searchbox">
             חיפוש
