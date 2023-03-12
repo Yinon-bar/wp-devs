@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes('he-il'); ?>>
 
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
@@ -14,10 +14,10 @@
       <section class="top-bar">
         <div class="container">
           <div class="logo">
-            Logo
+            לוגו
           </div>
           <div class="searchbox">
-            Search
+            חיפוש
           </div>
         </div>
       </section>

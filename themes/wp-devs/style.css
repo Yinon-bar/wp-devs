@@ -32,10 +32,11 @@ Tags: one-column, custom-menu, custom-logo, featured-images, translation-ready
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
- html {
+html {
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
-  }
+    font-family: 'Assistant', monospace; /* 1 */
+}
   
   /* Sections
      ========================================================================== */
@@ -46,6 +47,7 @@ Tags: one-column, custom-menu, custom-logo, featured-images, translation-ready
   
   body {
     margin: 0;
+    font-family: 'Assistant', monospace; /* 1 */
   }
   
   /**
@@ -86,7 +88,7 @@ Tags: one-column, custom-menu, custom-logo, featured-images, translation-ready
    */
   
   pre {
-    font-family: monospace, monospace; /* 1 */
+    font-family: 'Assistant', monospace, monospace; /* 1 */
     font-size: 1em; /* 2 */
   }
   
@@ -397,8 +399,8 @@ Tags: one-column, custom-menu, custom-logo, featured-images, translation-ready
     box-sizing: border-box;
 }
 body{
-    font-family: 'Poppins', sans-serif;
-    font: normal, 21px/2.1rem, 'Poppins', sans-serif;
+    font-family: 'Assistant', sans-serif;
+    font: normal, 21px/2.1rem, 'Assistant', sans-serif;
 }
 h1{
     font-size: 66px;
