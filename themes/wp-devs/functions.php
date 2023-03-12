@@ -20,7 +20,6 @@ function wpdevs_config()
   $args = array(
     'height' => 225,
     'width' => 1920
-
   );
   add_theme_support('custom-header', $args);
   add_theme_support('post-thumbnails');
@@ -33,3 +32,18 @@ function wpdevs_config()
 }
 
 add_action('after_setup_theme', 'wpdevs_config', 0);
+
+function wpdevs_sidebars()
+{
+  register_sidebar(array(
+    'name' => 'Blog Sidebar',
+    'id' => 'blog-sidebar',
+    'description' => 'This is the description',
+    'before_widget' => '<div class="widget-wrapper">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4 class="widget-title">',
+    'after_title' => '</h4>',
+  ));
+}
+
+add_action('widgets_init', 'wpdevs_sidebars');
