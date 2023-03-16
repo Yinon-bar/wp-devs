@@ -15,7 +15,7 @@
         <div class="container">
           <div class="logo">
             <?php the_custom_logo(); ?>
-      <?php the_custom_logo(); ?>
+
           </div>
           <div class="searchbox">
             חיפוש
