@@ -5,7 +5,7 @@
     </div>
     <nav class="footer-menu">
       <?php wp_nav_menu(array('theme_location' => 'wp_devs_footer_menu', 'depth' => 1)); ?>
-      <?php echo "end test" ?>
+      <?php echo "end test2" ?>
     </nav>
   </div>
 </footer>
